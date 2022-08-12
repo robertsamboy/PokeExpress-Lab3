@@ -8,7 +8,7 @@ const React = require('react');
             backgroundColor: 'green'
         };
         
-        const { pokemons } = this.props;
+        const { pokemon } = this.props;
        function caps(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
        }
@@ -18,12 +18,12 @@ const React = require('react');
             <div > 
                 <h1>See All The Pokemon!</h1>
                 <ul> 
-                    {pokemons.map((pokemon) =>{
+                    {pokemon.map((mons) =>{
                         return(
                             <li> 
                                 This{' '}
-                               <a href ={`/pokemon/x/${pokemon.id}`} >
-                               {caps(pokemon.name)}
+                               <a href ={`/pokemon/x/${mons.id}`} >
+                               {caps(mons.name)}
                                </a>
                                 {' '}
                                 is{' '}
