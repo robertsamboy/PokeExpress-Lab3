@@ -20,7 +20,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 
 app.get('/',(req,res)=>{
-    res.render('Intro', {pokemons:pokemons})
+    res.render('Intro')
 })
 
 // app.get('/pokemon/',(req,res)=>{
