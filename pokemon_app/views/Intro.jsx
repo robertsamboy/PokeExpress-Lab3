@@ -7,7 +7,7 @@ class Intro extends React.Component{
             color: 'white',
             backgroundColor: 'black'
         }
-            const {pokemon} = this.props.pokemon
+          
         
         return(
             <body style = {design}>
