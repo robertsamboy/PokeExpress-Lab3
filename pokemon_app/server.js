@@ -20,7 +20,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 
 app.get('/',(req,res)=>{
-    res.render('Intro')
+    res.send('Welcome to the Pokemon App!')
 })
 
 // app.get('/pokemon/',(req,res)=>{
