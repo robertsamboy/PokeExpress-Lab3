@@ -2,9 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const pokemons = require('./models/pokemon');
-const Pokemon = require('./models/pokemonz')
+const Pokemon = require('./models/pokemon')
 require('dotenv').config();
-const pokemon = require('./models/pokemon')
 const app = express();
 const port = process.env.PORT || 3003;
 
@@ -43,10 +42,7 @@ app.post('/pokemon/', (req,res)=>{
     })
 })
 
-app.post('/pokemon/x/', (req,res)=>{
-    
-    res.render('Show',{pokemons:pokemons})    
-})
+
 
 app.get('/pokemon/x/:id',(req,res)=>{
     Pokemon.findById(req.params.id, (err, foundPokemon)=>{
@@ -54,9 +50,6 @@ app.get('/pokemon/x/:id',(req,res)=>{
     })
 })
 
-app.get('/pokemon/:input', (req,res)=>{
-    res.render('Show',{pokemon: pokemons[req.params.input]})
-})
 
 app.listen(port,() => {
     console.log('I am listening on port' , port);
