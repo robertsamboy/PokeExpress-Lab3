@@ -9,6 +9,9 @@ const React = require('react');
         };
         
         const { pokemon } = this.props;
+       function caps(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+       }
 
         return(
             <body style={design}>
@@ -20,7 +23,7 @@ const React = require('react');
                             <li> 
                                 This{' '}
                                <a href ={`/pokemon/x/${mons.id}`} >
-                               {mons.name}
+                               {caps(mons.name)}
                                </a>
                                 {' '}
                                 is{' '}
