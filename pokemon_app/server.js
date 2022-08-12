@@ -22,9 +22,9 @@ app.get('/',(req,res)=>{
 })
 
 
-    app.get('/pokemon',(req,res)=>{
+    app.get("/pokemon/", (req,res)=>{
         Pokemon.find({}, (error, allPokemon)=>{
-            res.render('Index', {
+            res.render("Index", {
                 pokemon: allPokemon
             })
         })   
