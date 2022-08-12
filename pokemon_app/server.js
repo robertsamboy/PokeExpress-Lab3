@@ -19,7 +19,9 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 
-
+app.get('/',(req,res)=>{
+    res.render('Intro')
+})
 
 // app.get('/pokemon/',(req,res)=>{
 //         res.render('Index', {pokemons:pokemons})
