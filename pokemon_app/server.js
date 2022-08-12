@@ -1,7 +1,6 @@
 
 const express = require('express');
 const mongoose = require('mongoose')
-const pokemons = require('./models/pokemon');
 const Pokemon = require('./models/pokemon')
 require('dotenv').config();
 const app = express();
@@ -25,7 +24,9 @@ app.get('/',(req,res)=>{
 
     app.get('/pokemon',(req,res)=>{
         Pokemon.find({}, (error, allPokemon)=>{
-            res.render('Index', {pokemon: allPokemon})
+            res.render('Index', {
+                pokemon: allPokemon
+            })
         })   
 })
 
