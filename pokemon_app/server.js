@@ -22,11 +22,7 @@ app.get('/',(req,res)=>{
     res.send('Welcome to the Pokemon App!')
 })
 
-// app.get('/pokemon/',(req,res)=>{
-//         res.render('Index', {pokemons:pokemons})
-        
-      
-// })
+
     app.get('/pokemon/',(req,res)=>{
         Pokemon.find({}, (error, allPokemon)=>{
             res.render('Index', {pokemons:allPokemon})
