@@ -28,7 +28,7 @@ app.use(methodOverride('_method'))
 // seed route
 app.get('/pokemon/seed', (req, res)=>{
     //Come out the line below idf you dont want to dlete your whole entire collection
-    Pokemon.deleteMany({})
+    // Pokemon.deleteMany({})
     // create a list of pokemon into our datavbse
     Pokemon.create(pokemonData)
 })
