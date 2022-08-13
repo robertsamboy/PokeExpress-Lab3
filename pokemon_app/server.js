@@ -6,7 +6,9 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3003;
 const methodOverride = require('method-override')
+const pokemonData = require('./utilities/pokemonData')
 
+//DB connection
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongo')})
@@ -25,8 +27,10 @@ app.use(methodOverride('_method'))
 
 // seed route
 app.get('/pokemon/seed', (req, res)=>{
-    
+    //Come out the line below idf you dont want to dlete your whole entire collection
     Pokemon.deleteMany({})
+    // create a list of pokemon into our datavbse
+    Pokemon.create(pokemonData)
 })
 
 //home page
