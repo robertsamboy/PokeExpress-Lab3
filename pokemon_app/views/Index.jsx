@@ -29,7 +29,8 @@ const React = require('react');
                                 is{' '}
                                 a{' '}
                                 pokemon!
-                               
+                                <nav> <form action = {`/pokemon/x/${mon.id}?_method=DELETE`} method='POST'><button type='submit'>Delete Pokemon </button></form></nav>
+                                <a href = {`/pokemon/x/${mon.id}/edit`}>Change Pokemon</a>
                             </li>
                         )
                         
@@ -37,6 +38,7 @@ const React = require('react');
                     })}
                 </ul>
                 <nav> <a href = '/pokemon/new'> Create Pokemon</a></nav>
+                
             </div>
            
             </body>
